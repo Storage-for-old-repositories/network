@@ -11,8 +11,6 @@ server.on("connection", (socket) => {
       return;
     }
 
-    
-
     console.log(buffer)
   });
 
@@ -20,8 +18,10 @@ server.on("connection", (socket) => {
     console.warn('client error hook');
     console.log(err);
   })
+
+  socket.
 });
 
-server.listen(7184, "localhost", () => {
+server.listen(7184, () => {
   console.log("Server start");
 });
