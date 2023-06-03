@@ -1,6 +1,6 @@
 show_debug_message("try connect")
 
-var _ip = "92.118.114.37";
+var _ip = "94.198.221.108";
 var _port = 7184;
 
 if (self.socket != undefined) {
