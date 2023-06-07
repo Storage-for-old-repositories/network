@@ -1,0 +1,1 @@
+draw_text(22,155,"all: "+string(global.hostnum));
