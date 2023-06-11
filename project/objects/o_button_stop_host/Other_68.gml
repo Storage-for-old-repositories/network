@@ -15,5 +15,15 @@ if async_load[? "size"] > 0
 			is_stop = true;
 			room_goto(room_main);
 		}
+		if (res == "remove")
+		{
+			global.hostnum   = noone;
+			global.playernum = noone;
+			global.imnumber  = -1;
+			
+			room_goto(room_main);
+			//is_stop = true;
+			//room_goto(room_main);
+		}
 	}
 }

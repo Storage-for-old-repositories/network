@@ -11,3 +11,6 @@ _shoot = false;
 
 hp     = 10;
 _score = 0;
+
+dx = x;
+dy = y;

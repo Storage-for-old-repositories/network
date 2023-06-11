@@ -1,8 +1,5 @@
 show_debug_message("try connect")
 
-global._ip   = "194.187.122.113";
-global._port = 2080;
-
 if (global.socket != undefined) 
 {
 	network_destroy(global.socket)	

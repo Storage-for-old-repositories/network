@@ -1,11 +1,7 @@
 if (our_player == true)
 {
 	_PLAYER = global.playernum;
-	var xx = keyboard_check(vk_right) - keyboard_check(vk_left);
-	var yy = keyboard_check(vk_up)    - keyboard_check(vk_down);
-
-	x += xx * 3;
-	y -= yy * 3;
+	scr_move();
 
 	image_angle = point_direction(x,y,mouse_x,mouse_y);
 
@@ -24,15 +20,18 @@ if (our_player == true)
 	
 		send_socket( global._ip, global._port,200,data,msgType.statH);
 	}
-	show_debug_message(string([_PLAYER,x,y]));
+	//show_debug_message(string([_PLAYER,x,y]));
 	
 if (_shoot)
 {
 	_shoot = false;
 	var ins = instance_create_depth(x,y,0,o_bullet);
 	ins.direction = image_angle;
-	ins.speed = 15;
+	ins.speed = 25;
+	ins.image_angle = image_angle;
 	ins._PLAYER = _PLAYER;
+	
+	audio_play_sound(snd_shoot,0,0);
 }
 }
 else
